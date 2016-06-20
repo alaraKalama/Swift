@@ -146,7 +146,7 @@
                     <navigationItem key="navigationItem" id="vIP-kW-FQj">
                         <barButtonItem key="leftBarButtonItem" title="Add" id="Dzw-xA-oC4">
                             <connections>
-                                <action selector="saveContact:" destination="Lp5-jS-BGo" id="JGH-fg-7cf"/>
+                                <action selector="saveAlert:" destination="Lp5-jS-BGo" id="Wi6-Lt-vLl"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Search" id="W1C-0M-d7m">

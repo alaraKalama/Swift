@@ -29,8 +29,8 @@ class ContactsViewController: UITableViewController {
     }
 
     @IBAction func saveAlert(sender: AnyObject) {
-        let alert = UIAlertController(title: "New Name",
-                                      message: "Add a new name",
+        let alert = UIAlertController(title: "Add contact",
+                                      message: nil,
                                       preferredStyle: .Alert)
         
         let saveAction = UIAlertAction(title: "Save",
@@ -46,8 +46,17 @@ class ContactsViewController: UITableViewController {
                                          style: .Default) { (action: UIAlertAction) -> Void in
         }
         
-        alert.addTextFieldWithConfigurationHandler {
-            (textField: UITextField) -> Void in
+        alert.addTextFieldWithConfigurationHandler { (textField) in
+            textField.placeholder = "Name"
+        }
+        
+        alert.addTextFieldWithConfigurationHandler { (textField) in
+            textField.placeholder = "Phone"
+            textField.keyboardType = .PhonePad
+        }
+        
+        alert.addTextFieldWithConfigurationHandler { (textField) in
+            textField.placeholder = "Address"
         }
         
         alert.addAction(saveAction)
